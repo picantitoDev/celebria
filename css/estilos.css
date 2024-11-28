@@ -14,8 +14,19 @@ html, body {
     transform: translateY(-50px); /* Ajusta este valor para subir o bajar la sección */
     display: flex;
     align-items: center;
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeInUp 1s ease-out forwards; /* Animación para la hero section */
 }
-
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Empieza desde abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Llega a su posición original */
+    }
+}
 
 /* Botones Personalizados */
 #descubre-mas{
@@ -680,7 +691,7 @@ form {
 /* Título */
 .title {
     font-family: 'Poppins', sans-serif cursive;
-    color: #212529;
+    color: #162447;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
